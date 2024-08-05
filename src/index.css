@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+a.active{
+    background-color: #1ABC9C;   
+}
