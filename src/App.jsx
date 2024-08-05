@@ -1,4 +1,4 @@
-import { createBrowserRouter, Router, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Home from "./components/Home";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
@@ -10,14 +10,14 @@ function App() {
   RouterProvider
   let routes = createBrowserRouter([
     {
-      path: '/start-framework', element: <Layout />, children: [
+      path: '/', element: <Layout />, children: [
         { index: true, element: <Home /> },
-        { path: '/start-framework/about', element: <About /> },
-        { path: '/start-framework/portfolio', element: <Portfolio /> },
-        { path: '/start-framework/contact', element: <Contact /> },
+        { path: '/about', element: <About /> },
+        { path: '/portfolio', element: <Portfolio /> },
+        { path: '/contact', element: <Contact /> },
+        { path: '/*', element: <Notfound /> }
       ]
-    },
-    { path: '/*', element: <Notfound /> }
+    }
   ]);
   return (
     <>
